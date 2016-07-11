@@ -11,4 +11,6 @@ class ProductsController < ApplicationController
       render html: "Product not found", status: 404
     end
   end
+
+  
 end
