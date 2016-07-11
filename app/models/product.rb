@@ -1,5 +1,11 @@
 class Product < ApplicationRecord
 
+  validates :name, presence: true
+  validates :price, numericality: { only_integer: true }
+  validates :condition, presence: true
+  validates :on_clearance, inclusion: { in: [true, false] }
+  validates :quantity, numericality: { only_integer: true }
+
   def discount
     if on_clearance
       self.price *= 0.9 if condition.downcase == 'good'
@@ -7,12 +13,4 @@ class Product < ApplicationRecord
     end
       self.price
   end
-
-  validates :name, presence: true
-  validates :price, numericality: { only_integer: true }
-  validates :condition, presence: true
-  validates :on_clearance, inclusion: { in: [true, false] }
-  validates :quantity, numericality: { only_integer: true }
-
-
 end

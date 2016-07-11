@@ -3,8 +3,8 @@
 <h3><%= product.name %></h3>
 
 <p><%= product.condition %></p>
-<p><%= product.discount %>
-  <% if product.on_clearance %>
+<p><%= "$#{product.discount}" %>
+  <% if product.discount %>
     <%= " - 10% off original price" if product.condition == 'good' %>
     <%= " - 20% off original price" if product.condition == 'average' %>
   <% end %></p>
