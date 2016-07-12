@@ -11,6 +11,14 @@ class Product < ApplicationRecord
       self.price *= 0.9 if condition.downcase == 'good'
       self.price *= 0.8 if condition.downcase == 'average'
     end
-      self.price
+    self.price
+  end
+
+  def discount_amount
+    case condition.downcase
+    when "good" then "10"
+    when "average" then "20"
+    else "??"
+    end
   end
 end
