@@ -6,8 +6,7 @@ class CreateProducts < ActiveRecord::Migration[5.0]
       t.string :condition, null: false
       t.boolean :on_clearance, default: false
       t.integer :quantity, null: false
-      t.integer :category_id, null: false
-      
+
       t.timestamps
     end
   end

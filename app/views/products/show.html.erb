@@ -1,25 +1,31 @@
-<h3><%= product.name %></h3>
+<article class="full-product">
+  <h3><%= product.name %></h3>
 
-<p><%= product.condition %></p>
-<p><%= "$#{product.discount}" %>
-  <% if product.discount %>
-    <%= " - 10% off original price" if product.condition == 'good' %>
-    <%= " - 20% off original price" if product.condition == 'average' %>
-  <% end %></p>
-  <p><%= product.category %></p>
-  <div class='prod-category'>
-    <h4>More</h4>
-    <form action="/products/#{id}" method="post">
-      <textarea id='body' name='body'></textarea>
-      <input type='submit'/>
-    </form>
+  <div class="index-transbox">
+    <a href="/products/<%= product.id %> ">
+      <div class="image-holder">
+        <img src="<%= product.photo_url %>" />
+      </div>
   </div>
-<p><%= product.quantity %></p>
 
-<!-- <div class="index_transbox">
-  <a href="/products/<%= product.id %> ">
-  <img src="<%= product.photo_url %>" />
-</div>
-</a> -->
+  <p class="details"><%= product.condition %></p>
+  </article>
 
-</header>
+  <p><%= "$#{product.discount}" %>
+    <% if product.discount %>
+      <%= " - 10% off original price" if product.condition == 'good' %>
+      <%= " - 20% off original price" if product.condition == 'average' %>
+    <% end %></p>
+    <p><%= product.category %></p>
+    <div class='prod-category'>
+      <h4>More</h4>
+      <form action="/products/#{id}" method="post">
+        <textarea id='body' name='body'></textarea>
+        <input type='submit'/>
+      </form>
+
+        <p><%= product.quantity %></p>
+      </div>
+    </a>
+
+  </header>

@@ -7,10 +7,11 @@
       </h3>
     </header>
 
-    <!-- <div class="index_transbox">
+    <div class="index-transbox">
       <a href="/products/<%= product.id %> ">
-      <img src="<%= product.photo_url %>" />
-    </a> -->
+          <img class="display" src="<%= product.photo_url %>" class="image-holder"/>
+      </a>
+    </div>
 
     <p class='body'><%= "$#{product.discount}" %>
       <%= " - #{product.discount_amount}% off original price"%>

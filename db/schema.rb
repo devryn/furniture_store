@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712200842) do
+ActiveRecord::Schema.define(version: 20160713183435) do
 
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160712200842) do
     t.integer  "quantity",                     null: false
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.string   "photo_url"
   end
 
 end
