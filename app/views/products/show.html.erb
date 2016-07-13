@@ -7,14 +7,14 @@
   </div>
 
   <div class="prod-desc">
-  <h3><%= product.name %></h3>
-  <p class="details"><%= "Condition: #{product.condition}" %></p>
-  <p><%= "Price: $#{product.discount}" %>
+  <section class="name"><h3><%= product.name %></h3></section>
+  <p class="price-display">Price<p><%= "$#{product.discount}" %>
     <% if product.discount %>
       <%= " - 10% off original price" if product.condition == 'good' %>
       <%= " - 20% off original price" if product.condition == 'average' %>
       <% else product.price %>
     <% end %></p>
+    <p class="condition-display">Condition<p><%= "#{product.condition}" %></p>
     <p><%= product.category_id %></p>
 
         <p><%= "#{product.quantity} left!" %></p>

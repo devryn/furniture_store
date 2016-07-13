@@ -16,6 +16,7 @@
 
 * {
   box-sizing: border-box;
+  font-family: -apple-system, "Helvetica", Arial, sans-serif;
 }
 
 body {
@@ -94,12 +95,28 @@ a.button {
   float: left;
   padding-top: 1em;
   padding-left: .75em;
-  position: relative;
+  position: fixed;
 
 }
 
 .prod-desc {
   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
   max-width: 49%;
   float: right;
+
+}
+
+.name {
+  background: #EBCD26;
+}
+
+.price-display {
+  background: #6FEDD8
+}
+
+.condition-display {
+  background: #C9D1D0
 }
