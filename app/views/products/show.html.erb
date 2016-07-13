@@ -1,31 +1,23 @@
-<article class="full-product">
-  <h3><%= product.name %></h3>
+<article class="one-product">
 
   <div class="index-transbox">
     <a href="/products/<%= product.id %> ">
-      <div class="image-holder">
-        <img src="<%= product.photo_url %>" />
-      </div>
+        <img class="display-one" src="<%= product.photo_url %>" />
+    </a>
   </div>
 
-  <p class="details"><%= product.condition %></p>
-  </article>
-
-  <p><%= "$#{product.discount}" %>
+  <div class="prod-desc">
+  <h3><%= product.name %></h3>
+  <p class="details"><%= "Condition: #{product.condition}" %></p>
+  <p><%= "Price: $#{product.discount}" %>
     <% if product.discount %>
       <%= " - 10% off original price" if product.condition == 'good' %>
       <%= " - 20% off original price" if product.condition == 'average' %>
+      <% else product.price %>
     <% end %></p>
-    <p><%= product.category %></p>
-    <div class='prod-category'>
-      <h4>More</h4>
-      <form action="/products/#{id}" method="post">
-        <textarea id='body' name='body'></textarea>
-        <input type='submit'/>
-      </form>
+    <p><%= product.category_id %></p>
 
-        <p><%= product.quantity %></p>
+        <p><%= "#{product.quantity} left!" %></p>
       </div>
     </a>
-
-  </header>
+</article>

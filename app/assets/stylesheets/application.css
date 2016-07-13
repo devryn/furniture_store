@@ -75,7 +75,7 @@ a.button {
 
 }
 
-.image-holder {
+.display-all {
   height: 200px;
   width: 200px;
   max-width: 100%;
@@ -85,4 +85,21 @@ a.button {
   margin-right: auto;
   position: relative;
   object-fit: cover;
+}
+
+.display-one {
+  height: auto;
+  width: auto;
+  display: block;
+  float: left;
+  padding-top: 1em;
+  padding-left: .75em;
+  position: relative;
+
+}
+
+.prod-desc {
+  display: block;
+  max-width: 49%;
+  float: right;
 }
