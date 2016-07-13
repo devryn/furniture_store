@@ -5,7 +5,8 @@ class Product < ApplicationRecord
   validates :condition, presence: true
   validates :on_clearance, inclusion: { in: [true, false] }
   validates :quantity, numericality: { only_integer: true }
-
+  validates :category, presence: true
+  
   def discount
     if on_clearance
       self.price *= 0.9 if condition.downcase == 'good'
@@ -20,5 +21,9 @@ class Product < ApplicationRecord
     when "average" then "20"
     else "??"
     end
+  end
+
+  def photo_url
+
   end
 end

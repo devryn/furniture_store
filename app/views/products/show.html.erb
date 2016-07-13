@@ -6,6 +6,20 @@
     <%= " - 10% off original price" if product.condition == 'good' %>
     <%= " - 20% off original price" if product.condition == 'average' %>
   <% end %></p>
+  <p><%= product.category %></p>
+  <div class='prod-category'>
+    <h4>More</h4>
+    <form action="/products/#{id}" method="post">
+      <textarea id='body' name='body'></textarea>
+      <input type='submit'/>
+    </form>
+  </div>
 <p><%= product.quantity %></p>
+
+<!-- <div class="index_transbox">
+  <a href="/products/<%= product.id %> ">
+  <img src="<%= product.photo_url %>" />
+</div>
+</a> -->
 
 </header>
