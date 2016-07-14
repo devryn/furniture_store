@@ -5,14 +5,20 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+["furniture", "home", "clothing"].each do |category|
+  category = Category.create(name: category)
 
-5.times do
-  Product.create(name: Faker::Commerce.product_name,
-                 price: rand(50..5000),
-                 condition: ['excellent', 'good', 'average'].sample,
-                 on_clearance: rand(0..1),
-                 quantity: rand(1..5))
+  5.times do
+    Product.create(name: Faker::Commerce.product_name,
+                   price: rand(50..5000),
+                   condition: ['excellent', 'good', 'average'].sample,
+                   on_clearance: rand(0..1),
+                   quantity: rand(1..5),
+                   category_id: category.id)
+  end
 end
+
+
 #
 product_image = {
   "aluminum" => "https://secure.img1.wfrcdn.com/lf/49/hash/37312/26748078/1/Aluminum-Top-Dining-Table-TADN2846.jpg",

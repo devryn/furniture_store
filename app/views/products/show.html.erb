@@ -15,7 +15,7 @@
       <% else product.price %>
     <% end %></p>
     <p class="condition-display">Condition<p><%= "#{product.condition}" %></p>
-    <p><%= product.category_id %></p>
+    <p><%= product.category.name %></p>
 
         <p><%= "#{product.quantity} left!" %></p>
       </div>
